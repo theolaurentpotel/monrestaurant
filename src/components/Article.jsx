@@ -1,6 +1,6 @@
 import '../styles/Article.css'
 
-function Article({ image, name, price, ingredients, onAdd }) {
+function Article({ image, name, price, ingredients, onAdd, onRemove, onTagClick }) {
   return (
     <article className="article-card">
       <div className="article-image">
@@ -11,10 +11,23 @@ function Article({ image, name, price, ingredients, onAdd }) {
         <p className="price">{price} €</p>
         <div className="ingredients">
           {ingredients.map((ingredient, index) => (
-            <span key={index} className="ingredient-tag">{ingredient}</span>
+            <span
+              key={index}
+              className="ingredient-tag"
+              onClick={() => onTagClick && onTagClick(ingredient)}
+            >
+              {ingredient}
+            </span>
           ))}
         </div>
-        <button className="add-button" onClick={onAdd}>Ajouter au panier</button>
+        <div className="button-group">
+          {onAdd && (
+            <button className="add-button" onClick={onAdd}>Ajouter au panier</button>
+          )}
+          {onRemove && (
+            <button className="remove-button" onClick={onRemove}>Retirer</button>
+          )}
+        </div>
       </div>
     </article>
   )
