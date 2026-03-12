@@ -62,7 +62,7 @@ function App() {
       name: 'Frites',
       category: 'Accompagnements',
       price: 4,
-      image: 'https://images.unsplash.com/photo-1585238341710-4b6c6a954666?w=300&h=300&fit=crop',
+      image: 'https://eu-images.contentstack.com/v3/assets/blt5004e64d3579c43f/blt130eb8978cc923bf/615db7e9b084d018488c0a1e/3010.jpg?width=1200&height=630&crop=1200:630',
       ingredients: ['Frites', 'Accompagnements']
     },
     {
@@ -78,7 +78,7 @@ function App() {
       name: 'Poulet frit',
       category: 'Poulet rôti',
       price: 10,
-      image: 'https://images.unsplash.com/photo-1626082927389-6cd097cfd330?w=300&h=300&fit=crop',
+      image: 'https://uploads.lebonbon.fr/source/2021/february/2006417/istock-452813985_2_1000.jpg',
       ingredients: ['Poulet']
     },
     {
@@ -86,7 +86,7 @@ function App() {
       name: 'Kebab rouleau + frites',
       category: 'Kebab',
       price: 14,
-      image: 'https://images.unsplash.com/photo-1555939594-58d7cb561e1f?w=300&h=300&fit=crop',
+      image: 'https://www.cargest.com/wp-content/uploads/2025/02/rouleau-kebab-halal.webp',
       ingredients: ['Agneau', 'Frites', 'Oignons']
     }
   ]

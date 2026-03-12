@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #333;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100vh;
 }
 
@@ -23,6 +25,11 @@ html {
   overflow: hidden;
 }
 
+/* make buttons inherit font */
+button {
+  font-family: inherit;
+}
+
 .content-container {
   flex: 1;
   display: flex;
@@ -38,6 +45,9 @@ html {
   padding: 1rem 0.5rem;
   overflow-y: auto;
   border-right: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px 0 0 8px;
 }
 
 .sidebar h2 {
@@ -46,6 +56,8 @@ html {
   padding: 1rem;
   margin-bottom: 0;
   font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .category-list {
@@ -94,6 +106,9 @@ html {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  background: #fff;
+  border-radius: 0 0 0 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .filter-section input {
@@ -108,21 +123,26 @@ html {
   padding: 1rem;
   border: 1px solid #ddd;
   border-top: none;
+  background: #fff;
+  border-radius: 0 0 0 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .tag-list button {
   margin: 0.2rem;
   padding: 0.3rem 0.6rem;
-  border: 1px solid #ccc;
-  background: #f9f9f9;
+  border: none;
+  background: #e0e0e0;
   border-radius: 4px;
   cursor: pointer;
+  color: black; /* ensure tag text is black */
+  transition: background-color 0.2s;
 }
 
 .tag-list button.active,
 .category-list button.active {
   background: #3498db;
-  color: white;
+  color: white; /* keep active text white for contrast */
 }
 
 .category-list button {
@@ -133,10 +153,11 @@ html {
   border: none;
   background: none;
   cursor: pointer;
+  color: black; /* ensure category text is black */
 }
 
 .category-list button:hover {
-  background-color: #f5f5f5;
+  background-color: #eaeaea;
 }
 
 .menu-grid {
@@ -168,6 +189,7 @@ html {
     border-bottom: 1px solid #ddd;
     overflow-x: auto;
     overflow-y: visible;
+    border-radius: 8px 8px 0 0;
   }
 
   .sidebar h2 {
